@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELIRE — AI-powered lead qualification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="page">
+
+    <div class="signal-strip" aria-hidden="true">
+      <span class="signal-word">intake</span>
+      <span class="signal-dot-track">
+        <span class="signal-dot"></span>
+      </span>
+      <span class="signal-word">analysis</span>
+      <span class="signal-dot-track">
+        <span class="signal-dot signal-dot--delay"></span>
+      </span>
+      <span class="signal-word">routing</span>
+    </div>
+
+    <header class="hero">
+      <p class="eyebrow">ELIRE lead gateway</p>
+      <h1>AI-powered lead qualification</h1>
+      <p class="subhead">
+        Tell us about your business needs. Our routing engine reads every
+        submission, scores it for fit and intent, and gets it in front of
+        the right person.
+      </p>
+    </header>
+
+    <section class="terminal" aria-label="Lead submission form">
+
+      <form id="lead-form" novalidate>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="first_name">First name</label>
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              autocomplete="given-name"
+              required
+            />
+            <span class="field-error" id="error-first_name"></span>
+          </div>
+
+          <div class="field">
+            <label for="last_name">Last name</label>
+            <input
+              type="text"
+              id="last_name"
+              name="last_name"
+              autocomplete="family-name"
+              required
+            />
+            <span class="field-error" id="error-last_name"></span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Business email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          />
+          <span class="field-error" id="error-email"></span>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="company_name">Company name</label>
+            <input
+              type="text"
+              id="company_name"
+              name="company_name"
+              autocomplete="organization"
+              required
+            />
+            <span class="field-error" id="error-company_name"></span>
+          </div>
+
+          <div class="field">
+            <label for="job_title">Job title</label>
+            <input
+              type="text"
+              id="job_title"
+              name="job_title"
+              autocomplete="organization-title"
+              required
+            />
+            <span class="field-error" id="error-job_title"></span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Tell us about your needs</label>
+          <textarea
+            id="notes"
+            name="notes"
+            rows="4"
+            required
+          ></textarea>
+          <span class="field-error" id="error-notes"></span>
+        </div>
+
+        <div class="form-footer">
+          <button type="submit" id="submit-btn">
+            <span class="btn-label">Submit inquiry</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </div>
+
+      </form>
+
+    </section>
+
+    <footer class="page-footer">
+      <p>Submissions are reviewed by an automated routing engine, not a human, on first pass.</p>
+    </footer>
+
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
